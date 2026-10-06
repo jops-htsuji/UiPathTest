@@ -1,0 +1,6 @@
+{
+  "Name": "UiPath上級Gitテスト",
+  "ProjectType": "Process",
+  "Description": "空のプロジェクトです。",
+  "MainFile": "Main.xaml"
+}
