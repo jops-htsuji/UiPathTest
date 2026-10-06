@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="auj1rZ3kJkynQmy_jNyCMw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="github.com/login/oauth/authorize" DesignTimeRectangle="1097, 250, 142, 28" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='js-manual-authorize-redirect' tag='A' /&gt;" Guid="9ac23b65-f962-4762-aeab-5f0b1cace88a" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OAuth application authorized' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="eab47febf37672d7f139d5517561abf9.jpg" xmlns="">0WjxE17i0-kKeHio16Z76VQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

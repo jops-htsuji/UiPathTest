@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="シーケンス" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="シーケンス_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="シーケンス" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="シーケンス_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -27,6 +27,14 @@
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -64,14 +72,43 @@
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="1158,554.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="1152,586" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;TEST&quot;]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="452,123" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;TEST2&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge OAuth application authorized" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="452,440" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="1dd37929-d5d5-4927-ba97-3825e984162f" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="実行" sap:VirtualizedContainerService.HintSize="450,245" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="クリック 'this setup page'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1dd37929-d5d5-4927-ba97-3825e984162f" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="github.com/login/oauth/authorize" ContentHash="auj1rZ3kJkynQmy_jNyCMw" DesignTimeRectangle="1097, 250, 142, 28" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='js-manual-authorize-redirect' tag='A' /&gt;" Guid="9ac23b65-f962-4762-aeab-5f0b1cace88a" InformativeScreenshot="eab47febf37672d7f139d5517561abf9.jpg" Reference="1drl5buodESWCH8crovp9g/Ba2_uNDZWUuyYrDgkPfMmw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OAuth application authorized' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1150" BrowserType="Edge" ContentHash="6H4vHfeM0Eu7buVxQUmG9w" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAANRSURBVFhHtVc7a1RREF7fFr5lvpn7SFzjasAFLRb7RZBgYxFIIwpqoY2dYiPI6g8Qoy6p7MU/oF0ULGJANBZCEMQHxMJnHoJidGWOJ+u9s3cf2dUPBpYzM98359zzmM3lOkSxWFwbAEMCVIVoXIimGZhX099uDKhqjMba/K6RJxIBxphololqHdqs5miu5esYhUJhnQBXBFjIEOjINFc5lMvyt4Sf9YQl7NaUq+PViIF9QvTWkvRqyqncVi8FN/P/IL5kyt10Jfw3Ty27ED0XotsCfLBkHdhnIbojRI9TnMBE5p7QzWJJAubT6iuXy6uZ+RQD75zvz/F7JkQPhOg+A1NM9MULfBSis0tHMQCGLa9qpcT9pmvY7SJyIBlXJNogInsrlcrK5LiiVqutiKJoT39//9bkODPvbOAFFlKfwp/zVJBaEASlJFk3CMOw3/L6IsZcgC5Vs0smAI5bwuVCRA5bXm+z7jPp1ZnhdMsUBMEOS7hcRFG0XYD3lt9PcEiXv2odvoALlqxbCNFJy+81quoctw61OI53W6Jukc/nt1h+VwDRuBYw3eAAFnRXW6JeIMDrBh2i6Zw709YBvLQEvUKIJq2OamtlXxscRHOWoFfopKyOamcujTNmWJJukc/n1wvwzWoI8EoLeGQdagFwzBJ1ixZHfSIXEI1ah3MSTf6rjSjAXcvvJkk0mvlYJCo8b8mWCyE6YXnrBQDDucHBwY266azT2y99uUql0hpL3A76YOkEmGgxg1dtTh83FyzAzboDuBoyH/VPrBsTojcCVELgUBzH26zYEgYGBjYz88GA+SIDLzJE6ybMN+qJMVFBgO9e7JMKaXUMPLGJDDzMeo4VzW5Va3oi+oBd6WTgciJoNoqiWK9j+5CEzEdSiQmISNmKZZmups11LZlZ9ls67puVc0x0TTukzHbKQz+PFWswYKopRxiGfUw044MX9S23Me3ARD8aRP/ajGrYnBQiYH+qCOCe7uYAOCPApZGRkVU2J4kWu35GuW18JvT7M/A0g6TW7n8fE/20OdrAamtmY1vCt+kVe4frvW5jk9C7YylWT5beI+1yWkKPizBfd30jMK8tuo1JQtty948ZqP7Lpsa15LblzoJ+vkKhsMmON8NveexT0tCnzlwAAAAASUVORK5CYII=" InformativeScreenshot="ebea0db25cb80915ceda92e88d801708.jpg" Reference="1drl5buodESWCH8crovp9g/6aYkcLMQMk6y8IwAL7XN1A" Selector="&lt;html app='msedge.exe' title='OAuth application authorized' /&gt;" Url="https://github.com/login/oauth/authorize" Version="V3" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
   </Sequence>
 </Activity>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge OAuth application authorized",
+  "Type": "Screen",
+  "Id": "6aYkcLMQMk6y8IwAL7XN1A",
+  "Reference": "1drl5buodESWCH8crovp9g/6aYkcLMQMk6y8IwAL7XN1A",
+  "ParentRef": "1drl5buodESWCH8crovp9g/B9MncRT8KkKX1V5nxl5-7A",
+  "Created": "2026-10-06T05:20:29.0646037Z",
+  "Updated": "2026-10-06T05:20:29.0646037Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.9.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
